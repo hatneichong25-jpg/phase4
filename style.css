@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #f163f1;
+    --primary-hover: #e546e5;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+ 
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+ 
+.main-container {
+    max-width: 800px;
+    width: 100%;
+}
+ 
+h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(to right, #c844c6, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+ 
+.tool-box {
+    background: var(--card-bg);
+    margin-bottom: 24px;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.tool-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+ 
+h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-main);
+}
+ 
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 16px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f8f6f7;
+    font-size: 1rem;
+    color: var(--text-main);
+    transition: border-color 0.2s;
+    outline: none;
+    box-sizing: border-box;
+}
+ 
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+ 
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+ 
+button:hover:not(:disabled) {
+    background-color: var(--primary-hover);
+}
+ 
+/* Disabled while a request is in flight */
+button:disabled {
+    background-color: #cbd5e1;
+    cursor: not-allowed;
+}
+ 
+.output-text {
+    margin-top: 24px;
+    font-size: 1rem;
+    color: #334155;
+    background-color: #f9f1f9;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    white-space: pre-wrap;
+    min-height: 20px;
+    display: none;
+}
+ 
+/* Show the output box only when it has text */
+.output-text:not(:empty) {
+    display: block;
+}
+ 
+/* Loading state: toggled on/off from main.js */
+.loading {
+    color: var(--text-muted);
+    font-style: italic;
+    border-left-color: var(--text-muted);
+    background-color: #f1f5f9;
+}
