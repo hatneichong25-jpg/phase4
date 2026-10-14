@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Content Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Gemini AI Content Hub</h1>
+ 
+        <div class="tool-box">
+            <h3>Ask Me Anything</h3>
+            <input type="text" id="askInput" placeholder="You can ask me any question.">
+            <button id="askBtn" onclick="handleAI('ask')">Get Answer</button>
+            <p id="askOutput" class="output-text"></p>
+        </div>
+ 
+        <div class="tool-box">
+            <h3>Quick Summarizer</h3>
+            <textarea id="sumInput" placeholder="Paste a long article here..."></textarea>
+            <button id="sumBtn" onclick="handleAI('summarize')">Summarize</button>
+            <p id="sumOutput" class="output-text"></p>
+        </div>
+ 
+        <div class="tool-box">
+            <h3>Idea Spark</h3>
+            <input type="text" id="ideaInput" placeholder="e.g. blog post ideas about JavaScript">
+            <button id="ideaBtn" onclick="handleAI('idea')">Spark Ideas</button>
+            <p id="ideaOutput" class="output-text"></p>
+        </div>
+ 
+        <div class="tool-box">
+            <h3>Definition Finder</h3>
+            <input type="text" id="defInput" placeholder="Give me a word and I'll give you the definition.">
+            <button id="defBtn" onclick="handleAI('define')">Find Meaning</button>
+            <p id="defOutput" class="output-text"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
